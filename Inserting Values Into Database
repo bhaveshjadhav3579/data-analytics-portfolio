@@ -1,0 +1,64 @@
+USE ShopEasy;
+
+
+-- Customer Values;
+
+
+INSERT INTO customers VALUES
+(1, 'Rahul', 'Mumbai', 22),
+(2, 'Priya', 'Delhi', 25),
+(3, 'Aman', 'Pune', 21),
+(4, 'Sneha', 'Mumbai', 28),
+(5, 'Karan', 'Ahmedabad', 24),
+(6, 'Neha', 'Surat', 23),
+(7, 'Arjun', 'Delhi', 30),
+(8, 'Riya', 'Pune', 26);
+
+-- Categories value
+
+INSERT INTO categories VALUES
+(1, 'Electronics'),
+(2, 'Accessories'),
+(3, 'Furniture');
+
+-- Products values
+
+INSERT INTO products VALUES
+(101, 'Laptop', 1, 55000, 10),
+(102, 'Mouse', 2, 1200, 50),
+(103, 'Keyboard', 2, 2500, 30),
+(104, 'Monitor', 1, 18000, 15),
+(105, 'Headphones', 2, 3500, 25),
+(106, 'Office Chair', 3, 8000, 12),
+(107, 'Desk', 3, 12000, 8),
+(108, 'Webcam', 1, 4500, 20);
+
+-- Orders values
+
+INSERT INTO orders VALUES
+(1001, 1, 101, 1, '2026-01-05'),
+(1002, 2, 102, 2, '2026-01-07'),
+(1003, 1, 103, 1, '2026-01-10'),
+(1004, 3, 104, 1, '2026-01-15'),
+(1005, 4, 105, 2, '2026-01-20'),
+(1006, 5, 106, 1, '2026-02-02'),
+(1007, 6, 102, 3, '2026-02-05'),
+(1008, 2, 101, 1, '2026-02-10'),
+(1009, 7, 107, 1, '2026-02-15'),
+(1010, 8, 108, 2, '2026-02-20'),
+(1011, 1, 105, 1, '2026-03-01'),
+(1012, 3, 103, 2, '2026-03-05'),
+(1013, 4, 104, 1, '2026-03-10'),
+(1014, 5, 102, 2, '2026-03-15'),
+(1015, 6, 101, 1, '2026-03-20'),
+(1016, 7, 106, 1, '2026-03-25'),
+(1017, 8, 107, 2, '2026-04-01'),
+(1018, 2, 105, 1, '2026-04-05'),
+(1019, 1, 102, 1, '2026-04-10'),
+(1020, 4, 101, 1, '2026-04-15');
+
+
+SELECT * FROM customers;
+SELECT * FROM categories;
+SELECT * FROM products;
+SELECT * FROM orders;
