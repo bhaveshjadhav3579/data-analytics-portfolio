@@ -1,0 +1,59 @@
+-- CREATE DATABASE ShopEasy;
+
+USE ShopEasy;
+
+
+-- Customers
+
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100),
+    city VARCHAR(50),
+    age INT
+);
+
+
+-- Categories
+
+
+CREATE TABLE categories (
+    category_id INT PRIMARY KEY,
+    category_name VARCHAR(50)
+);
+
+
+-- Products
+
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category_id INT,
+    price DECIMAL(10,2),
+    stock INT,
+    FOREIGN KEY (category_id)
+    REFERENCES categories(category_id)
+);
+
+
+-- Orders
+
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id)
+    REFERENCES customers(customer_id),
+    FOREIGN KEY (product_id)
+    REFERENCES products(product_id)
+);
+
+
+SELECT * FROM customers;
+SELECT * FROM categories;
+SELECT * FROM products;
+SELECT * FROM orders;
